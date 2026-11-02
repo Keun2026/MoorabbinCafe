@@ -1,0 +1,433 @@
+/* ==========================================================================
+   Espresso Coffee Palette Design System
+   ========================================================================== */
+:root {
+  --primary-espresso: #2B1810;  /* Rich dark espresso tone for header, footer & headings */
+  --secondary-espresso: #3D2317;/* Slightly lighter roast for hover states */
+  --accent-warm: #D48821;       /* Warm roast amber/gold for active links & buttons */
+  --bg-cream: #F4F1EA;          /* Light warm background */
+  --card-bg: #FFFFFF;
+  --text-dark: #2C2C2C;
+  --text-muted: #666666;
+  --border-color: #E2DDD5;
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   Base Resets & Typography
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Layout Containers & Cards
+   ========================================================================== */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.card h2, 
+.card h3 {
+  color: var(--primary-espresso);
+  margin-bottom: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header {
+  background-color: var(--primary-espresso);
+  color: #ffffff;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 5px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #ffffff;
+  border-bottom: 2px solid var(--accent-warm);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-container {
+  max-width: 1000px;
+  margin: 2rem auto 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../images/coffee4.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 650px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-warm);
+  color: #ffffff;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   Forms & Maps
+   ========================================================================== */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--primary-espresso);
+  border-color: transparent;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.map-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* ==========================================================================
+   Unified 4-Column Menu Layout
+   ========================================================================== */
+.menu-grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.menu-text-box-coffee,
+.menu-text-box-bakery {
+  grid-column: span 2;
+  background: var(--card-bg);
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.menu-text-box-coffee h3,
+.menu-text-box-bakery h3 {
+  color: var(--primary-espresso);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-warm);
+  padding-bottom: 0.4rem;
+}
+
+.menu-text-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+  padding: 0.5rem 0;
+}
+
+.menu-text-name {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.menu-text-price {
+  font-weight: 700;
+  color: var(--primary-espresso);
+  font-size: 0.95rem;
+}
+
+.menu-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card-body {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.menu-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-espresso);
+  margin: 0;
+}
+
+.menu-card-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-warm);
+}
+
+.menu-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Footer & Social Icons
+   ========================================================================== */
+footer {
+  background-color: var(--primary-espresso);
+  color: #ffffff;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  display: block;
+}
+
+.social-icon.facebook-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .menu-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-text-box-coffee,
+  .menu-text-box-bakery {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-espresso);
+    padding: 1.0rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+
+  .nav-toggle:checked ~ nav .nav-menu {
+    display: flex;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid-4col {
+    grid-template-columns: 1fr;
+  }
+  .menu-text-box-coffee,
+  .menu-text-box-bakery {
+    grid-column: span 1;
+  }
+}
