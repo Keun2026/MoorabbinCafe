@@ -385,16 +385,6 @@ footer {
 /* ==========================================================================
    Responsive Media Queries
    ========================================================================== */
-@media (max-width: 1024px) {
-  .menu-grid-4col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .menu-text-box-coffee,
-  .menu-text-box-bakery {
-    grid-column: span 2;
-  }
-}
-
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -419,15 +409,5 @@ footer {
 
   .grid-2 {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-grid-4col {
-    grid-template-columns: 1fr;
-  }
-  .menu-text-box-coffee,
-  .menu-text-box-bakery {
-    grid-column: span 1;
   }
 }

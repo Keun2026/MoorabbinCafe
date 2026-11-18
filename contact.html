@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moorabbin Cafe | Contact & Location</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Contact & Location | Moorabbin Cafe</title>  
+
   <!-- Updated for SEO -->
+  <!-- Open Graph Tags: if someone shares direct link on social media, it generates a custom preview card
+  for contact instead of home page -->
+  <meta property="og:title" content="Contact & Location | Moorabbin Cafe">
+  <meta property="og:description" content="Visit Moorabbin Cafe at 488 South Road, Moorabbin. Get in touch or check our location details.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Updated for SEO: invisible, gives Google the business' exact physical address, Google uses it for searchers nearby -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,8 +61,8 @@
     <div class="grid-2">
         <!-- Contact Form -->
         <section class="card">
-        <h3>Booking Appointments</h3>
-          <form action="#" method="post" onsubmit="alert('Thank you for your message!'); return false;">
+        <h3>Booking an Appointment</h3>
+          <form action="#" method="post" onsubmit="alert('Thank you for your appointment!'); return false;">
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your Name">
