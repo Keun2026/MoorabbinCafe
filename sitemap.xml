@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- When a search engine bot visits the site, it reads robots.txt first to confirm
+ it is allowed to index the pages, and follows the Sitemap.
+This sitemap is designed for SEO so that search engines can crawl the website efficiently. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://keun2026.github.io/MoorabbinCafe/index.html</loc>
