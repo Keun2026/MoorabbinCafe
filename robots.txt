@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keun2026.github.io/MoorabbinCafe/sitemap.xml
